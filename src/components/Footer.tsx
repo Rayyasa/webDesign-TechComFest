@@ -16,33 +16,27 @@ const Footer = () => {
           </p>
         </aside>
         <nav>
-          <header className="footer-title">Company</header>
+          <header className="footer-title">About Us</header>
           <a className="link hover:font-semibold  hover:translate-x-2 no-underline transition-all duration-500 ease-in-out">
-            About us
+            User_ig
           </a>
           <a className="link hover:font-semibold  hover:translate-x-2 no-underline transition-all duration-500 ease-in-out">
-            Contact
+            User_ig
           </a>
           <a className="link hover:font-semibold  hover:translate-x-2 no-underline transition-all duration-500 ease-in-out">
-            Jobs
-          </a>
-          <a className="link hover:font-semibold  hover:translate-x-2 no-underline transition-all duration-500 ease-in-out">
-            Press kit
+            User_ig
           </a>
         </nav>
         <nav>
-          <header className="footer-title">Company</header>
+          <header className="footer-title">Contact</header>
           <a className="link hover:font-semibold  hover:translate-x-2 no-underline transition-all duration-500 ease-in-out">
-            About us
+            12983801289
           </a>
           <a className="link hover:font-semibold  hover:translate-x-2 no-underline transition-all duration-500 ease-in-out">
-            Contact
+            102938129083
           </a>
           <a className="link hover:font-semibold  hover:translate-x-2 no-underline transition-all duration-500 ease-in-out">
-            Jobs
-          </a>
-          <a className="link hover:font-semibold  hover:translate-x-2 no-underline transition-all duration-500 ease-in-out">
-            Press kit
+            1923012983012
           </a>
         </nav>
         <form className="flex flex-col justify-end">
