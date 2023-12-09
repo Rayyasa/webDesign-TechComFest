@@ -97,3 +97,51 @@
 //     </div>
 //   );
 // };
+// components/Swiper.tsx
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css"; // Import the Swiper styles
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { StaticImageData } from "next/image";
+interface SwiperComponentProps {
+  images: { src: StaticImageData; alt: string }[];
+}
+
+const SwiperComponent: React.FC<SwiperComponentProps> = ({ images }) => {
+  const params = {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    autoplay: {
+      delay: 2000,
+    },
+    spaceBetween: 30,
+  };
+
+  return (
+    <div className="swiper-container">
+      <Swiper {...params}>
+        {images.map((image, index) => (
+          <SwiperSlide key={index}>
+            <img
+              src={image.src.src}
+              alt={image.alt}
+              className="object-cover block h-96 w-full rounded-lg"
+            />
+          </SwiperSlide>
+        ))}
+        <div className="swiper-pagination"></div>
+        <div className="swiper-button-next"></div>
+        <div className="swiper-button-prev"></div>
+      </Swiper>
+    </div>
+  );
+};
+
+export default SwiperComponent;

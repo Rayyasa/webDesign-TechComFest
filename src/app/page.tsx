@@ -48,6 +48,7 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/navigation";
 import { useSwiper } from "swiper/react";
+import SwiperComponent from "@/components/ImageSlider";
 export default function Home() {
   const [show5w, setShow5w] = useState(false);
   const { clientX, clientY } = useMousePosition();
@@ -92,7 +93,11 @@ export default function Home() {
     requestAnimationFrame(raf);
   }, []);
 
-  const Images = [g1, g2, g3, g4, g5];
+  const images = [
+    { src: g1, alt: "Blog 1" },
+    { src: g1, alt: "Blog 2" },
+    { src: g1, alt: "Blog 3" },
+  ];
 
   return (
     <main className="flex min-h-screen w-full max-w-[1600px] mx-auto  pt-[60px] flex-col">
@@ -522,7 +527,7 @@ export default function Home() {
           </Swiper>
         </div> */}
         <div className="container">
-          <Swiper
+          {/* <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             slidesPerView={1}
             navigation
@@ -562,7 +567,8 @@ export default function Home() {
                 style={{ width: "100%" }}
               />
             </SwiperSlide>
-          </Swiper>
+          </Swiper> */}
+          <SwiperComponent images={images} />
         </div>
       </section>
     </main>
