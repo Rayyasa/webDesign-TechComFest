@@ -48,7 +48,7 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/navigation";
 import { useSwiper } from "swiper/react";
-import SwiperComponent from "@/components/ImageSlider";
+// import SwiperComponent from "@/components/ImageSlider";
 export default function Home() {
   const [show5w, setShow5w] = useState(false);
   const { clientX, clientY } = useMousePosition();
@@ -401,34 +401,6 @@ export default function Home() {
       <section className="px-8 xl:px-32 mt-14 xl:mt-28 w-full">
         <h1 className="font-cardo text-3xl xl:text-5xl">Blog</h1>
         <section className="w-full grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 mt-10 gap-4">
-          {/* <div className="rounded-md overflow-hidden flex flex-col bg-slate-200">
-            <Image
-              src={g8}
-              alt="Blog 1"
-              className="w-full  object-cover aspect-video rounded-e-sm mb-2"
-            />
-            <div className="p-4 flex flex-col gap-1">
-              <div className="flex flex-row  items-center justify-between">
-                <div className="flex flex-row gap-2">
-                  <p className="text-xs">6 Des 23</p>
-                  <p className="text-xs">10min ago</p>
-                </div>
-                <div className="">
-                  <EllipsisVerticalIcon className="h-6 w-6" />
-                </div>
-              </div>
-              <div className="pb-1">
-                <h2 className="text-gray-950 font-semibold text-lg">
-                  Pesona alam indonesia
-                </h2>
-                <p className="text-sm">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Possimus, nemo?
-                </p>
-              </div>
-              <ChatBubbleLeftIcon className="h-6 w-6" />
-            </div>
-          </div> */}
           <CardBlog
             img={g1.src}
             tanggal={"6 Des 2023"}
@@ -468,108 +440,23 @@ export default function Home() {
         </section>
       </section>
 
-      <section className="px-8 xl:px-32 mt-14 xl:mt-28 w-full max-w-[1200px] bg-black h-[500px] flex items-center mx-auto rounded-lg">
-        {/* <ImageSlider/> */}
-        {/* <div className="relative">
-          <div className="absolute top-0 left-0 w-full h-full bg-red-700/75 z-10"></div>
-          <Swiper
-            modules={[Autoplay, Navigation, Pagination]}
-            navigation
-            slidesPerView={1}
-            loop={true}
-            autoplay={{
-              delay: 2000,
-            }}
-            pagination={{ clickable: true }}
-          >
-            <SwiperSlide>
-              <div className="">
-                <Image
-                  src={g1.src}
-                  width={500}
-                  style={{ width: "100%" }}
-                  height={500}
-                  alt="Slide 1"
-                  className=" object-cover aspect-video"
-                />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
+      <section className="px-8 xl:px-32 mt-14 xl:mt-28 w-full">
+        <h1 className="font-cardo text-3xl xl:text-5xl">Apa Kata Tokoh</h1>
+        <section className="w-full grid grid-cols-2 md:grid-cols-3 xl:grid-cols-3 mt-10 gap-4">
+          <div className="flex h-[180px] rounded-xl overflow-hidden border bg-slate-200 items-center shadow-md">
+            <div className="w-[180px] h-full">
               <Image
-                src={g1.src}
-                width={500}
-                style={{ width: "100%" }}
-                height={500}
-                alt="Slide 1"
-                className=" object-cover aspect-video"
+                src={g8}
+                alt="foto 8"
+                className="object-cover h-full"
               />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Image
-                src={g1.src}
-                width={500}
-                style={{ width: "100%" }}
-                height={500}
-                alt="Slide 1"
-                className=" object-cover aspect-video"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Image
-                src={g1.src}
-                width={500}
-                style={{ width: "100%" }}
-                height={500}
-                alt="Slide 1"
-                className=" object-cover aspect-video"
-              />
-            </SwiperSlide>
-          </Swiper>
-        </div> */}
-        <div className="container">
-          {/* <Swiper
-            modules={[Navigation, Pagination, Autoplay]}
-            slidesPerView={1}
-            navigation
-            pagination={{ clickable: true }}
-            autoplay={{
-              delay: 2000,
-            }}
-            className="h-96 rounded-lg w-full"
-          >
-            <SwiperSlide>
-              <Image
-                src={g1}
-                alt="Blog 1"
-                className=" object-cover block h-96 w-full"
-                width={500}
-                height={0}
-                style={{ width: "100%" }}
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Image
-                src={g1}
-                alt="Blog 1"
-                className=" object-cover block h-96 w-full"
-                width={500}
-                height={0}
-                style={{ width: "100%" }}
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Image
-                src={g1}
-                alt="Blog 1"
-                className=" object-cover block h-96 w-full"
-                width={500}
-                height={0}
-                style={{ width: "100%" }}
-              />
-            </SwiperSlide>
-          </Swiper> */}
-          <SwiperComponent images={images} />
-        </div>
+            </div>
+            <div className="flex-1 py-2 px-2">
+              <p className="text-sm text-center mb-2">"Budaya adalah jati diri sebuah bangsa, Indonesia kaya akan kebudayaan, kita harus melestarikannya untuk generasi mendatang."</p>
+              <p className="text-sm text-center">~ Joko Widodo - Hokage ke-7</p>
+            </div>
+          </div>
+        </section>
       </section>
     </main>
   );
