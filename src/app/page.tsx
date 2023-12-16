@@ -38,7 +38,7 @@ import jokowi from "../assets/jokowi.jpeg";
 import sri from "../assets/sri-mulyani.jpeg";
 import anies from "../assets/anies.jpeg";
 import megawati from "../assets/megawati.jpeg";
-import susi from "../assets/susi.jpeg" ;
+import susi from "../assets/susi.jpeg";
 import bj from "../assets/bj.jpeg";
 import tito from "../assets/tito.jpeg";
 import yenny from "../assets/yenny.jpeg";
@@ -102,7 +102,53 @@ export default function Home() {
 
     requestAnimationFrame(raf);
   }, []);
-
+  const tokohData = [
+    {
+      img: jokowi.src,
+      text: `"Budaya adalah jati diri sebuah bangsa, Indonesia kaya akan kebudayaan, kita harus melestarikannya untuk generasi mendatang."`,
+      nama: `"Joko WiDodo"`,
+    },
+    {
+      img: sri.src,
+      text: `"Keanekaragaman budaya Indonesia adalah sumber kekuatan bagi kita. Melalui kesatuan dalam perbedaan, kita membangun identitas yang kokoh."`,
+      nama: `"Sri Mulyani Indrawati"`,
+    },
+    {
+      img: anies.src,
+      text: `"Budaya adalah cerminan hati nurani suatu bangsa. Keberagaman budaya Indonesia adalah aset yang harus dijaga dengan penuh kebanggaan."`,
+      nama: `"Anies Baswedan"`,
+    },
+    {
+      img: megawati.src,
+      text: `"Budaya bukanlah batasan, tapi jembatan penghubung untuk memahami satu sama lain. Mari kita jaga kekayaan budaya Indonesia sebagai landasan persatuan."`,
+      nama: `"Megawati Soekarnoputri"`,
+    },
+    {
+      img: susi.src,
+      text: `"Kita memiliki begitu banyak kekayaan budaya yang beragam. Mari jadikan keberagaman ini sebagai kekuatan dalam membangun Indonesia yang lebih baik."`,
+      nama: `"Susi Pudjiastuti"`,
+    },
+    {
+      img: bj.src,
+      text: `"Budaya Indonesia adalah permata berharga yang harus dijaga, dipelihara, dan dibanggakan. Inilah yang menjadi ciri khas dan kekuatan bangsa."`,
+      nama: `"B.J. Habibie"`,
+    },
+    {
+      img: tito.src,
+      text: `"Budaya adalah warisan leluhur yang menjadi penanda jati diri bangsa. Mari lestarikan kearifan lokal sebagai bagian tak terpisahkan dari identitas kita."`,
+      nama: `"Tito Karnavian"`,
+    },
+    {
+      img: yenny.src,
+      text: `"Dalam keberagaman budaya terdapat kekuatan yang luar biasa. Mari kita jadikan kekayaan ini sebagai landasan untuk bersatu dan maju bersama."`,
+      nama: `"Yenny Wahid"`,
+    },
+    {
+      img: agus.src,
+      text: `"Budaya adalah cerminan kearifan lokal yang memperkaya identitas bangsa. Mari kita jaga keberagaman ini sebagai kekuatan bersama."`,
+      nama: `"Agus Harimurti Yudhoyono"`,
+    },
+  ];
   return (
     <main className="flex min-h-screen w-full max-w-[1600px] mx-auto  pt-[60px] flex-col">
       <section
@@ -447,51 +493,14 @@ export default function Home() {
       <section className="px-8 xl:px-32 mt-14 xl:mt-28 w-full">
         <h1 className="font-cardo text-3xl xl:text-5xl">Apa Kata Tokoh</h1>
         <section className="w-full grid grid-cols-2 md:grid-cols-3 xl:grid-cols-3 mt-10 gap-4">
-          <CardTokoh
-            img={g1.src}
-            text={`"Budaya adalah jati diri sebuah bangsa, Indonesia kaya akan kebudayaan, kita harus melestarikannya untuk generasi mendatang."`}
-            nama={`"Joko WiDodo"`}
-          />
-          <CardTokoh
-            img={g1.src}
-            text={`"Keanekaragaman budaya Indonesia adalah sumber kekuatan bagi kita. Melalui kesatuan dalam perbedaan, kita membangun identitas yang kokoh."`}
-            nama={`"Sri Mulyani Indrawati"`}
-          />
-          <CardTokoh
-            img={g1.src}
-            text={`"Budaya adalah cerminan hati nurani suatu bangsa. Keberagaman budaya Indonesia adalah aset yang harus dijaga dengan penuh kebanggaan."`}
-            nama={`"Anies Baswedan"`}
-          />
-          <CardTokoh
-            img={g1.src}
-            text={`"Budaya bukanlah batasan, tapi jembatan penghubung untuk memahami satu sama lain. Mari kita jaga kekayaan budaya Indonesia sebagai landasan persatuan."`}
-            nama={`"Megawati Soekarnoputri"`}
-          />
-          <CardTokoh
-            img={g1.src}
-            text={`"Kita memiliki begitu banyak kekayaan budaya yang beragam. Mari jadikan keberagaman ini sebagai kekuatan dalam membangun Indonesia yang lebih baik."`}
-            nama={`"Susi Pudjiastuti"`}
-          />
-          <CardTokoh
-            img={g1.src}
-            text={`"Budaya Indonesia adalah permata berharga yang harus dijaga, dipelihara, dan dibanggakan. Inilah yang menjadi ciri khas dan kekuatan bangsa."`}
-            nama={`"B.J. Habibie"`}
-          />
-          <CardTokoh
-            img={g1.src}
-            text={`"Budaya adalah warisan leluhur yang menjadi penanda jati diri bangsa. Mari lestarikan kearifan lokal sebagai bagian tak terpisahkan dari identitas kita."`}
-            nama={`"Tito Karnavian"`}
-          />
-          <CardTokoh
-            img={g1.src}
-            text={`"Dalam keberagaman budaya terdapat kekuatan yang luar biasa. Mari kita jadikan kekayaan ini sebagai landasan untuk bersatu dan maju bersama."`}
-            nama={`"Yenny Wahid"`}
-          />
-          <CardTokoh
-            img={g1.src}
-            text={`"Budaya adalah cerminan kearifan lokal yang memperkaya identitas bangsa. Mari kita jaga keberagaman ini sebagai kekuatan bersama."`}
-            nama={`"Agus Harimurti Yudhoyono"`}
-          />
+          {tokohData.map((item, index) => (
+            <CardTokoh
+              img={item.img}
+              text={item.text}
+              nama={item.nama}
+              key={index}
+            />
+          ))}
         </section>
       </section>
     </main>
