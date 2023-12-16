@@ -34,6 +34,15 @@ import g6 from "../assets/g6.jpg";
 import g7 from "../assets/g7.jpg";
 import g8 from "../assets/g8.jpg";
 import CardBlog from "@/components/CardBlog";
+import jokowi from "../assets/jokowi.jpeg";
+import sri from "../assets/sri-mulyani.jpeg";
+import anies from "../assets/anies.jpeg";
+import megawati from "../assets/megawati.jpeg";
+import susi from "../assets/susi.jpeg" ;
+import bj from "../assets/bj.jpeg";
+import tito from "../assets/tito.jpeg";
+import yenny from "../assets/yenny.jpeg";
+import agus from "../assets/agus.jpeg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
   A11y,
@@ -48,6 +57,7 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/navigation";
 import { useSwiper } from "swiper/react";
+import CardTokoh from "@/components/CardTokoh";
 // import SwiperComponent from "@/components/ImageSlider";
 export default function Home() {
   const [show5w, setShow5w] = useState(false);
@@ -92,12 +102,6 @@ export default function Home() {
 
     requestAnimationFrame(raf);
   }, []);
-
-  const images = [
-    { src: g1, alt: "Blog 1" },
-    { src: g1, alt: "Blog 2" },
-    { src: g1, alt: "Blog 3" },
-  ];
 
   return (
     <main className="flex min-h-screen w-full max-w-[1600px] mx-auto  pt-[60px] flex-col">
@@ -443,19 +447,51 @@ export default function Home() {
       <section className="px-8 xl:px-32 mt-14 xl:mt-28 w-full">
         <h1 className="font-cardo text-3xl xl:text-5xl">Apa Kata Tokoh</h1>
         <section className="w-full grid grid-cols-2 md:grid-cols-3 xl:grid-cols-3 mt-10 gap-4">
-          <div className="flex h-[180px] rounded-xl overflow-hidden border bg-slate-200 items-center shadow-md">
-            <div className="w-[180px] h-full">
-              <Image
-                src={g8}
-                alt="foto 8"
-                className="object-cover h-full"
-              />
-            </div>
-            <div className="flex-1 py-2 px-2">
-              <p className="text-sm text-center mb-2">"Budaya adalah jati diri sebuah bangsa, Indonesia kaya akan kebudayaan, kita harus melestarikannya untuk generasi mendatang."</p>
-              <p className="text-sm text-center">~ Joko Widodo - Hokage ke-7</p>
-            </div>
-          </div>
+          <CardTokoh
+            img={g1.src}
+            text={`"Budaya adalah jati diri sebuah bangsa, Indonesia kaya akan kebudayaan, kita harus melestarikannya untuk generasi mendatang."`}
+            nama={`"Joko WiDodo"`}
+          />
+          <CardTokoh
+            img={g1.src}
+            text={`"Keanekaragaman budaya Indonesia adalah sumber kekuatan bagi kita. Melalui kesatuan dalam perbedaan, kita membangun identitas yang kokoh."`}
+            nama={`"Sri Mulyani Indrawati"`}
+          />
+          <CardTokoh
+            img={g1.src}
+            text={`"Budaya adalah cerminan hati nurani suatu bangsa. Keberagaman budaya Indonesia adalah aset yang harus dijaga dengan penuh kebanggaan."`}
+            nama={`"Anies Baswedan"`}
+          />
+          <CardTokoh
+            img={g1.src}
+            text={`"Budaya bukanlah batasan, tapi jembatan penghubung untuk memahami satu sama lain. Mari kita jaga kekayaan budaya Indonesia sebagai landasan persatuan."`}
+            nama={`"Megawati Soekarnoputri"`}
+          />
+          <CardTokoh
+            img={g1.src}
+            text={`"Kita memiliki begitu banyak kekayaan budaya yang beragam. Mari jadikan keberagaman ini sebagai kekuatan dalam membangun Indonesia yang lebih baik."`}
+            nama={`"Susi Pudjiastuti"`}
+          />
+          <CardTokoh
+            img={g1.src}
+            text={`"Budaya Indonesia adalah permata berharga yang harus dijaga, dipelihara, dan dibanggakan. Inilah yang menjadi ciri khas dan kekuatan bangsa."`}
+            nama={`"B.J. Habibie"`}
+          />
+          <CardTokoh
+            img={g1.src}
+            text={`"Budaya adalah warisan leluhur yang menjadi penanda jati diri bangsa. Mari lestarikan kearifan lokal sebagai bagian tak terpisahkan dari identitas kita."`}
+            nama={`"Tito Karnavian"`}
+          />
+          <CardTokoh
+            img={g1.src}
+            text={`"Dalam keberagaman budaya terdapat kekuatan yang luar biasa. Mari kita jadikan kekayaan ini sebagai landasan untuk bersatu dan maju bersama."`}
+            nama={`"Yenny Wahid"`}
+          />
+          <CardTokoh
+            img={g1.src}
+            text={`"Budaya adalah cerminan kearifan lokal yang memperkaya identitas bangsa. Mari kita jaga keberagaman ini sebagai kekuatan bersama."`}
+            nama={`"Agus Harimurti Yudhoyono"`}
+          />
         </section>
       </section>
     </main>
