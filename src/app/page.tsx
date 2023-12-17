@@ -402,6 +402,7 @@ export default function Home() {
               title="Festival Budaya"
               image={bgFestival.src}
               additional="xl:row-span-2 h-auto"
+              onClick={() => router.push("/blog-festival")}
             />
             <Most 
               title="Pariwisata" 
