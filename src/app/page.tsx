@@ -58,7 +58,7 @@ import "swiper/css/scrollbar";
 import "swiper/css/navigation";
 import { useSwiper } from "swiper/react";
 import CardTokoh from "@/components/CardTokoh";
-// import SwiperComponent from "@/components/ImageSlider";
+
 export default function Home() {
   const [show5w, setShow5w] = useState(false);
   const { clientX, clientY } = useMousePosition();
@@ -102,6 +102,7 @@ export default function Home() {
 
     requestAnimationFrame(raf);
   }, []);
+  
   const tokohData = [
     {
       img: jokowi.src,
@@ -149,6 +150,7 @@ export default function Home() {
       nama: `"Agus Harimurti Yudhoyono"`,
     },
   ];
+
   return (
     <main className="flex min-h-screen w-full max-w-[1600px] mx-auto  pt-[60px] flex-col">
       <section
