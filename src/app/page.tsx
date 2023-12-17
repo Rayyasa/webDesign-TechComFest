@@ -393,13 +393,20 @@ export default function Home() {
               image={bgSejarah.src}
               additional="xl:col-span-2"
             />
-            <Most title="Kuliner" image={bgKuliner.src} />
+            <Most 
+              title="Kuliner" 
+              image={bgKuliner.src} 
+              onClick={() => router.push("/blog-kuliner")}
+            />
             <Most
               title="Festival Budaya"
               image={bgFestival.src}
               additional="xl:row-span-2 h-auto"
             />
-            <Most title="Pariwisata" image={bgPariwista.src} />
+            <Most 
+              title="Pariwisata" 
+              image={bgPariwista.src} 
+            />
             <Most 
               title="Seni Tradisional" 
               image={bgSeni.src}  
