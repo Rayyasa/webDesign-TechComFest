@@ -400,7 +400,11 @@ export default function Home() {
               additional="xl:row-span-2 h-auto"
             />
             <Most title="Pariwisata" image={bgPariwista.src} />
-            <Most title="Seni Tradisional" image={bgSeni.src} />
+            <Most 
+              title="Seni Tradisional" 
+              image={bgSeni.src}  
+              onClick={() => router.push("/blog-seni")}
+            />
             <Most
               title="Senjata"
               image={bgSenjata.src}
