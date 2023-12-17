@@ -23,7 +23,7 @@ export default function CardTokoh({ img, text, nama }: CardProps) {
     //     <p className="text-xs sm:text-sm text-center font-bold">{nama}</p>
     //   </div>
     // </div>
-    <figure className="xl:h-[150px] overflow-hidden rounded-xl bg-slate-100 p-2 xl:flex xl:p-0">
+    <figure className="overflow-hidden rounded-xl bg-slate-100 p-2 xl:flex xl:h-[150px] xl:p-0">
       <Image
         className="mx-auto h-24 w-24 rounded-full object-cover xl:h-auto xl:w-[100px] xl:rounded-none"
         src={img}
@@ -34,7 +34,9 @@ export default function CardTokoh({ img, text, nama }: CardProps) {
 
       <div className="space-y-4 pt-6 text-center xl:p-3 xl:text-left">
         <blockquote>
-          <p className="text-xs font-medium xl:text-sm xl:text-center">{text}</p>
+          <p className="text-xs font-medium xl:text-center xl:text-sm">
+            {text}
+          </p>
         </blockquote>
         <figcaption className="font-medium">
           <div className="text-sm text-gray-800 xl:text-center">{nama}</div>
