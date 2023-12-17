@@ -392,6 +392,7 @@ export default function Home() {
               title="Sejarah Budaya"
               image={bgSejarah.src}
               additional="xl:col-span-2"
+              onClick={() => router.push("/blog-sejarah")}
             />
             <Most 
               title="Kuliner" 
