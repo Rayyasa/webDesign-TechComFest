@@ -408,6 +408,7 @@ export default function Home() {
             <Most 
               title="Pariwisata" 
               image={bgPariwista.src} 
+              onClick={() => router.push("/blog-pariwisata")}
             />
             <Most 
               title="Seni Tradisional" 
