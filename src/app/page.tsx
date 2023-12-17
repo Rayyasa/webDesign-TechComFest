@@ -45,8 +45,11 @@ import yenny from "../assets/yenny.jpeg";
 import agus from "../assets/agus.jpeg";
 import CardTokoh from "@/components/CardTokoh";
 import { XMarkIcon } from "@heroicons/react/24/outline";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
+
   const [show5w, setShow5w] = useState(false);
   const { clientX, clientY } = useMousePosition();
 
@@ -143,36 +146,35 @@ export default function Home() {
   const [imgSrc, setImgSrc] = useState<any>(null);
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  useEffect(() => {
-    console.log(imgSrc)
-  }, [imgSrc])
-
   return (
     <>
-    {isOpen && (
-      <section className="fixed z-[999] top-0 right-0 left-0 bottom-0 bg-black/60 flex items-center justify-center">
-        <XMarkIcon className="absolute h-10 text-white top-5 right-5 md:top-10 md:right-10" onClick={() => setIsOpen((prev) => !prev)} />
+      {isOpen && (
+        <section className="fixed bottom-0 left-0 right-0 top-0 z-[999] flex items-center justify-center bg-black/60">
+          <XMarkIcon
+            className="absolute right-5 top-5 h-10 text-white md:right-10 md:top-10"
+            onClick={() => setIsOpen((prev) => !prev)}
+          />
 
-        <Image 
-          src={imgSrc}
-          alt="foto"
-          width={500}
-          height={500}
-          className="md:w-[50%] w-[90%] h-[80vh] object-cover border border-black/20 rounded-xl"
-        />
-      </section>
-    )}
+          <Image
+            src={imgSrc}
+            alt="foto"
+            width={500}
+            height={500}
+            className="h-[80vh] w-[90%] rounded-xl border border-black/20 object-cover md:w-[50%]"
+          />
+        </section>
+      )}
 
-      <main className="flex min-h-screen w-full max-w-[1600px] mx-auto  pt-[60px] flex-col">
+      <main className="mx-auto flex min-h-screen w-full max-w-[1600px]  flex-col pt-[60px]">
         <section
           className={`${
             show5w ? "h-[3000px]" : "h-[600px]"
-          } w-full bg-pink-600  overflow-hidden ${
+          } w-full overflow-hidden  bg-pink-600 ${
             show5w ? "rounded-none" : "rounded-[0%0%50%50%/0%0%10%10%]"
           } transition-all duration-700`}
         >
           <div
-            className="h-[600px] group"
+            className="group h-[600px]"
             style={{
               backgroundImage: `url(${boro.src})`,
               backgroundSize: "cover",
@@ -180,14 +182,14 @@ export default function Home() {
             }}
             ref={targetHero}
           >
-            <div className="w-full h-full bg-gradient-to-r from-black/70 to-transparent flex flex-row justify-between items-center px-4 md:px-32">
-              <div className="w-full xl:w-[700px] group-hover:ml-3 transition-all duration-700 flex flex-col items-center xl:items-start">
-                <h1 className={"text-white font-cardo font-base text-3xl"}>
+            <div className="flex h-full w-full flex-row items-center justify-between bg-gradient-to-r from-black/70 to-transparent px-4 md:px-32">
+              <div className="flex w-full flex-col items-center transition-all duration-700 group-hover:ml-3 xl:w-[700px] xl:items-start">
+                <h1 className={"font-base font-cardo text-3xl text-white"}>
                   Selamat datang di
                 </h1>
                 <h1
                   className={
-                    "font-cardo font-base text-6xl md:text-9xl bg-clip-text stroke-current text-transparent w-fit"
+                    "font-base w-fit bg-clip-text stroke-current font-cardo text-6xl text-transparent md:text-9xl"
                   }
                   style={{
                     backgroundImage: `url(${bgWhite5.src})`,
@@ -196,22 +198,22 @@ export default function Home() {
                 >
                   Indiscoveries
                 </h1>
-                <h1 className={"text-white font-cardo font-base text-xl"}>
+                <h1 className={"font-base font-cardo text-xl text-white"}>
                   Jelajahi, Pelajari, Cintai
                 </h1>
-                <div className="mt-7 group-hover:ml-5 transition-all duration-700">
+                <div className="mt-7 transition-all duration-700 group-hover:ml-5">
                   <Button title="Apa itu budaya ?" onClick={handleShow} />
                 </div>
                 {/* <Image src={logo} alt="indiscoveries" className="w-full object-cover drop-shadow-2xl "/> */}
               </div>
 
-              <div className=" hidden h-full w-[270px] group-hover:w-[280px] xl:flex items-end mr-10 group-hover:mr-14 transition-all duration-700">
+              <div className=" mr-10 hidden h-full w-[270px] items-end transition-all duration-700 group-hover:mr-14 group-hover:w-[280px] xl:flex">
                 <Image alt="penari" src={penari} className="object-cover" />
               </div>
             </div>
           </div>
           <div
-            className="w-full md:h-[3000px] bg-green-500 flex flex-col"
+            className="flex w-full flex-col bg-green-500 md:h-[3000px]"
             ref={target5w}
           >
             <div
@@ -220,13 +222,13 @@ export default function Home() {
                 backgroundSize: "cover",
                 backgroundPosition: "rigth 30%",
               }}
-              className="w-full h-[500px]"
+              className="h-[500px] w-full"
             >
-              <div className="md:w-[50%] w-full h-full bg-gradient-to-r md:from-black/60 from-black/60 to-black/60 flex flex-col justify-center md:items-start items-center pl-8 pr-8 xl:pl-32 xl:pr-24 gap-4">
-                <h1 className="text-white font-cardo text-5xl font-semibold">
+              <div className="flex h-full w-full flex-col items-center justify-center gap-4 bg-gradient-to-r from-black/60 to-black/60 pl-8 pr-8 md:w-[50%] md:items-start md:from-black/60 xl:pl-32 xl:pr-24">
+                <h1 className="font-cardo text-5xl font-semibold text-white">
                   What (Apa)
                 </h1>
-                <p className="text-white text-lg md:text-left text-center">
+                <p className="text-center text-lg text-white md:text-left">
                   Budaya Indonesia adalah warisan nilai-nilai, tradisi, bahasa,
                   seni, dan kepercayaan yang dimiliki oleh masyarakat Indonesia.
                   Budaya ini mencakup beragam aspek seperti seni tari, musik,
@@ -240,17 +242,17 @@ export default function Home() {
                 backgroundSize: "cover",
                 backgroundPosition: "rigth 30%",
               }}
-              className="w-full h-[500px] flex flex-row-reverse"
+              className="flex h-[500px] w-full flex-row-reverse"
             >
-              <div className="md:w-[50%] w-full h-full bg-gradient-to-l md:from-black/60 from-black/60 to-black/60 flex flex-col justify-center md:items-end items-center pl-8 pr-8 xl:pl-32 xl:pr-24 gap-4">
-                <h1 className="text-white font-cardo text-5xl font-semibold">
+              <div className="flex h-full w-full flex-col items-center justify-center gap-4 bg-gradient-to-l from-black/60 to-black/60 pl-8 pr-8 md:w-[50%] md:items-end md:from-black/60 xl:pl-32 xl:pr-24">
+                <h1 className="font-cardo text-5xl font-semibold text-white">
                   Who (Siapa)
                 </h1>
-                <p className="text-white text-lg  md:text-right text-center">
+                <p className="text-center text-lg  text-white md:text-right">
                   Budaya Indonesia melibatkan seluruh penduduk Indonesia, yang
                   terdiri dari berbagai suku, agama, dan etnis. Masyarakat
-                  Indonesia terdiri dari lebih dari 300 suku bangsa, yang memiliki
-                  kebudayaan dan tradisi yang berbeda-beda.
+                  Indonesia terdiri dari lebih dari 300 suku bangsa, yang
+                  memiliki kebudayaan dan tradisi yang berbeda-beda.
                 </p>
               </div>
             </div>
@@ -260,13 +262,13 @@ export default function Home() {
                 backgroundSize: "cover",
                 backgroundPosition: "rigth 30%",
               }}
-              className="w-full h-[500px]"
+              className="h-[500px] w-full"
             >
-              <div className="md:w-[50%] w-full h-full bg-gradient-to-r md:from-black/60 from-black/60 to-black/60 flex flex-col justify-center md:items-start items-center pl-8 pr-8 xl:pl-32 xl:pr-24 gap-4">
-                <h1 className="text-white font-cardo text-5xl font-semibold">
+              <div className="flex h-full w-full flex-col items-center justify-center gap-4 bg-gradient-to-r from-black/60 to-black/60 pl-8 pr-8 md:w-[50%] md:items-start md:from-black/60 xl:pl-32 xl:pr-24">
+                <h1 className="font-cardo text-5xl font-semibold text-white">
                   Where (Di mana)
                 </h1>
-                <p className="text-white text-lg text-center md:text-left">
+                <p className="text-center text-lg text-white md:text-left">
                   Budaya Indonesia tersebar di seluruh kepulauan Indonesia, yang
                   terdiri dari ribuan pulau besar dan kecil. Beberapa kota besar
                   seperti Jakarta, Yogyakarta, dan Bali menjadi pusat kegiatan
@@ -280,17 +282,18 @@ export default function Home() {
                 backgroundSize: "cover",
                 backgroundPosition: "rigth 30%",
               }}
-              className="w-full h-[500px] flex flex-row-reverse"
+              className="flex h-[500px] w-full flex-row-reverse"
             >
-              <div className="md:w-[50%] w-full h-full bg-gradient-to-l md:from-black/60 from-black/60 to-black/60 flex flex-col justify-center items-center md:items-end pl-8 pr-8 xl:pl-32 xl:pr-24 gap-4">
-                <h1 className="text-white font-cardo text-5xl font-semibold">
+              <div className="flex h-full w-full flex-col items-center justify-center gap-4 bg-gradient-to-l from-black/60 to-black/60 pl-8 pr-8 md:w-[50%] md:items-end md:from-black/60 xl:pl-32 xl:pr-24">
+                <h1 className="font-cardo text-5xl font-semibold text-white">
                   When (Kapan)
                 </h1>
-                <p className="text-white text-lg text-center  md:text-right">
+                <p className="text-center text-lg text-white  md:text-right">
                   Budaya Indonesia memiliki sejarah panjang yang dimulai sejak
-                  zaman prasejarah. Beberapa elemen budaya Indonesia memiliki akar
-                  sejarah ribuan tahun, sementara yang lain berkembang selama masa
-                  kolonial dan pascakemerdekaan Indonesia pada tahun 1945.
+                  zaman prasejarah. Beberapa elemen budaya Indonesia memiliki
+                  akar sejarah ribuan tahun, sementara yang lain berkembang
+                  selama masa kolonial dan pascakemerdekaan Indonesia pada tahun
+                  1945.
                 </p>
               </div>
             </div>
@@ -300,13 +303,13 @@ export default function Home() {
                 backgroundSize: "cover",
                 backgroundPosition: "rigth 30%",
               }}
-              className="w-full h-[500px]"
+              className="h-[500px] w-full"
             >
-              <div className="md:w-[50%] w-full h-full bg-gradient-to-r md:from-black/60 from-black/60 to-black/60 flex flex-col justify-center md:items-start items-center pl-8 pr-8 xl:pl-32 xl:pr-24 gap-4">
-                <h1 className="text-white font-cardo text-5xl font-semibold">
+              <div className="flex h-full w-full flex-col items-center justify-center gap-4 bg-gradient-to-r from-black/60 to-black/60 pl-8 pr-8 md:w-[50%] md:items-start md:from-black/60 xl:pl-32 xl:pr-24">
+                <h1 className="font-cardo text-5xl font-semibold text-white">
                   Why (Mengapa)
                 </h1>
-                <p className="text-white text-lg md:text-left text-center">
+                <p className="text-center text-lg text-white md:text-left">
                   Budaya Indonesia penting karena mencerminkan identitas dan
                   keberagaman bangsa Indonesia. Budaya ini juga merupakan sarana
                   untuk melestarikan tradisi nenek moyang, mempererat hubungan
@@ -322,13 +325,13 @@ export default function Home() {
                 backgroundSize: "cover",
                 backgroundPosition: "rigth 30%",
               }}
-              className="w-full h-[500px] flex flex-row-reverse"
+              className="flex h-[500px] w-full flex-row-reverse"
             >
-              <div className="md:w-[50%] w-full h-full bg-gradient-to-l md:from-black/60 from-black/60 to-black/60 flex flex-col justify-center items-center md:items-end pl-8 pr-8 xl:pl-32 xl:pr-24 gap-4">
-                <h1 className="text-white font-cardo text-5xl font-semibold">
+              <div className="flex h-full w-full flex-col items-center justify-center gap-4 bg-gradient-to-l from-black/60 to-black/60 pl-8 pr-8 md:w-[50%] md:items-end md:from-black/60 xl:pl-32 xl:pr-24">
+                <h1 className="font-cardo text-5xl font-semibold text-white">
                   How (Bagaimana)
                 </h1>
-                <p className="text-white text-lg text-center  md:text-right">
+                <p className="text-center text-lg text-white  md:text-right">
                   Budaya Indonesia berkembang melalui generasi-generasi,
                   diwariskan melalui cerita-cerita lisan, praktik-praktik
                   sehari-hari, serta melalui seni dan pertunjukan. Pendidikan
@@ -342,24 +345,26 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className=" px-8 xl:px-32 mt-14 xl:mt-28 flex flex-col justify-between items-start gap-4">
-          <h1 className="font-cardo text-3xl xl:text-5xl mb-5 text-center ">
+
+        <section className=" mt-14 flex flex-col items-start justify-between gap-4 px-8 xl:mt-28 xl:px-32">
+          <h1 className="mb-5 text-center font-cardo text-3xl xl:text-5xl ">
             Jelajahi Kebudayaan indonesia
           </h1>
 
-          <div className="flex flex-col xl:flex-row items-start  w-full justify-between">
-            <p className="hidden xl:flex text-gray-700 text-justify pt-5 max-w-lg">
+          <div className="flex w-full flex-col items-start  justify-between xl:flex-row">
+            <p className="hidden max-w-lg pt-5 text-justify text-gray-700 xl:flex">
               Selamat datang di koleksi video budaya Indonesia kami! Temukan
               keindahan dan keanekaragaman budaya Indonesia dalam potret singkat
               yang memukau. Setiap video ini adalah jendela ke pesona kebudayaan
               Indonesia. Rasakan kehangatan dan kekayaan warisan budaya dari
-              berbagai daerah dengan setiap tarian, ritual, dan kegiatan yang kami
-              sajikan. Mari menjelajahi keberagaman budaya yang memikat hati
-              melalui video kami. Selamat menikmati keindahan budaya Indonesia!
+              berbagai daerah dengan setiap tarian, ritual, dan kegiatan yang
+              kami sajikan. Mari menjelajahi keberagaman budaya yang memikat
+              hati melalui video kami. Selamat menikmati keindahan budaya
+              Indonesia!
             </p>
-            <div className="aspect-video w-full xl:w-auto xl:h-[320px] rounded-xl overflow-hidden">
+            <div className="aspect-video w-full overflow-hidden rounded-xl xl:h-[320px] xl:w-auto">
               <iframe
-                className="w-full h-full"
+                className="h-full w-full"
                 src="https://www.youtube.com/embed/_dlBUHhDOQU?si=YFRlYsB1BD_0fpeX"
                 title="YouTube video player"
                 frameBorder="0"
@@ -367,21 +372,22 @@ export default function Home() {
                 allowFullScreen
               ></iframe>
             </div>
-            <p className="xl:hidden text-gray-700 text-justify pt-5 ">
+            <p className="pt-5 text-justify text-gray-700 xl:hidden ">
               Selamat datang di koleksi video budaya Indonesia kami! Temukan
               keindahan dan keanekaragaman budaya Indonesia dalam potret singkat
               yang memukau. Setiap video ini adalah jendela ke pesona kebudayaan
               Indonesia. Rasakan kehangatan dan kekayaan warisan budaya dari
-              berbagai daerah dengan setiap tarian, ritual, dan kegiatan yang kami
-              sajikan. Mari menjelajahi keberagaman budaya yang memikat hati
-              melalui video kami. Selamat menikmati keindahan budaya Indonesia!
+              berbagai daerah dengan setiap tarian, ritual, dan kegiatan yang
+              kami sajikan. Mari menjelajahi keberagaman budaya yang memikat
+              hati melalui video kami. Selamat menikmati keindahan budaya
+              Indonesia!
             </p>
           </div>
         </section>
 
-        <section className="px-8 xl:px-32 mt-14 xl:mt-28">
+        <section className="mt-14 px-8 xl:mt-28 xl:px-32">
           <h1 className="font-cardo text-3xl xl:text-5xl">Most Topics</h1>
-          <div className="grid grid-cols-2 xl:grid-cols-4 mt-10 gap-4 xl:gap-10">
+          <div className="mt-10 grid grid-cols-2 gap-4 xl:grid-cols-4 xl:gap-10">
             <Most
               title="Sejarah Budaya"
               image={bgSejarah.src}
@@ -395,32 +401,40 @@ export default function Home() {
             />
             <Most title="Pariwisata" image={bgPariwista.src} />
             <Most title="Seni Tradisional" image={bgSeni.src} />
-            <Most title="Senjata" image={bgSenjata.src} />
+            <Most
+              title="Senjata"
+              image={bgSenjata.src}
+              onClick={() => router.push("/blog-senjata")}
+            />
           </div>
         </section>
 
-        <section className="px-8 xl:px-32 mt-14 xl:mt-28 w-full">
+        <section className="mt-14 w-full px-8 xl:mt-28 xl:px-32">
           <h1 className="font-cardo text-3xl xl:text-5xl">Gallery</h1>
 
-          <section className="w-full grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 mt-10 gap-4">
-          {imageSources.map((srcImage, index) => (
-            <div key={index} className="rounded-md overflow-hidden shadow-xl cursor-pointer" onClick={() => {
-              setImgSrc(srcImage)
-              setIsOpen(true)
-            }}>
-              <Image
-                src={srcImage}
-                alt={`foto ${index + 1}`}
-                className="w-full object-cover aspect-video"
-              />
-            </div>
-          ))}
+          <section className="mt-10 grid w-full grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-4">
+            {imageSources.map((srcImage, index) => (
+              <div
+                key={index}
+                className="cursor-pointer overflow-hidden rounded-md shadow-xl"
+                onClick={() => {
+                  setImgSrc(srcImage);
+                  setIsOpen(true);
+                }}
+              >
+                <Image
+                  src={srcImage}
+                  alt={`foto ${index + 1}`}
+                  className="aspect-video w-full object-cover"
+                />
+              </div>
+            ))}
           </section>
         </section>
 
-        <section className="px-8 xl:px-32 mt-14 xl:mt-28 w-full">
+        <section className="mt-14 w-full px-8 xl:mt-28 xl:px-32">
           <h1 className="font-cardo text-3xl xl:text-5xl">Blog</h1>
-          <section className="w-full grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 mt-10 gap-4">
+          <section className="mt-10 grid w-full grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-4">
             <CardBlog
               img={g1.src}
               tanggal={"6 Des 2023"}
@@ -460,9 +474,9 @@ export default function Home() {
           </section>
         </section>
 
-        <section className="px-8 xl:px-32 mt-14 xl:mt-28 w-full">
+        <section className="mt-14 w-full px-8 xl:mt-28 xl:px-32">
           <h1 className="font-cardo text-3xl xl:text-5xl">Apa Kata Tokoh</h1>
-          <section className="w-full grid grid-cols-2 md:grid-cols-3 xl:grid-cols-3 mt-10 gap-4">
+          <section className="mt-10 grid w-full grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-3">
             {tokohData.map((item, index) => (
               <CardTokoh
                 img={item.img}

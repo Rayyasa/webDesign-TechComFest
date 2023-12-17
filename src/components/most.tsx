@@ -15,7 +15,7 @@ export default function Most({
   return (
     <div
       {...props}
-      className={`w-full min-h-[288px] group/card rounded-2xl overflow-hidden relative ${additional} shadow-lg outline-4 outline-black `}
+      className={`w-full min-h-[288px] group/card rounded-2xl overflow-hidden relative ${additional} shadow-lg outline-4 outline-black cursor-pointer `}
       style={{
         backgroundImage: `url(${image})`,
         backgroundSize: "cover",
