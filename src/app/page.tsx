@@ -501,6 +501,14 @@ export default function Home() {
             ))}
           </section>
         </section>
+        <section className="mt-14 w-full px-8 xl:mt-28 xl:px-32">
+          <h1 className="font-cardo text-3xl xl:text-5xl">Indonesia Culture Event</h1>
+          <section className="mt-10 grid w-full grid-cols-3 gap-4">
+            <div className="w-[25px] h-[200px] pt-10">
+              <h1 className="font-semibold text-4xl rotate-[-90deg]">Jan.</h1>
+            </div>
+          </section>
+        </section>
       </main>
     </>
   );
