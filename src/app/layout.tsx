@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Navbar from "@/components/navbar";
 import "./globals.css";
 import Footer from "@/components/Footer";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const inter = Poppins({ weight: "400", subsets: ["latin"] });
 
@@ -26,6 +27,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Navbar />
           <div className="w-full mx-auto">{children}</div>
+          <SpeedInsights/>
         <Footer />
       </body>
     </html>
