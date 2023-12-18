@@ -503,10 +503,23 @@ export default function Home() {
         </section>
         <section className="mt-14 w-full px-8 xl:mt-28 xl:px-32">
           <h1 className="font-cardo text-3xl xl:text-5xl">Indonesia Culture Event</h1>
-          <section className="mt-10 grid w-full grid-cols-3 gap-4">
-            <div className="flex flex-row gap-5 w-full h-full">
-            <div className="border-r-2 flex flex-col border-[#D9D9D9] pr-4 items-center justify-center">
-              <h1 className="font-semibold text-6xl rotate-[-90deg]">Jan.</h1>
+          <section className="mt-10 grid w-full xl:grid-cols-3 xl:gap-4 grid-cols-2 gap-6 md:grid-cols-3">
+            <div className="flex xl:flex-row  flex-col gap-4 w-full h-full">
+            <div className="xl:border-r-2 xl:border-b-0 flex flex-col border-[#D9D9D9] pr-3 items-center justify-center border-b-2">
+              <h1 className="font-semibold text-4xl xl:rotate-[-90deg] ">Jan.</h1>
+            </div>
+              <div className="flex flex-col gap-1">
+                <h1 className="text-lg font-light">Hari Kemerdekaan</h1>
+                <p className="text-[#747474] font-extralight text-sm">17 Agustus</p>
+                <h1 className="text-lg font-light">Hari Kemerdekaan</h1>
+                <p className="text-[#747474] font-extralight text-sm">17 Agustus</p>
+                <h1 className="text-lg font-light">Hari Kemerdekaan</h1>
+                <p className="text-[#747474] font-extralight text-sm">17 Agustus</p>
+              </div>
+            </div>
+            <div className="flex xl:flex-row  flex-col gap-4 w-full h-full">
+            <div className=" xl:border-r-2 border-b-2 xl:border-b-0 flex flex-col border-[#D9D9D9] pr-3 items-center justify-center">
+              <h1 className="font-semibold text-4xl xl:rotate-[-90deg] ">Jan.</h1>
             </div>
               <div className="flex flex-col gap-1">
                 <h1 className="text-lg font-light">Hari Kemerdekaan</h1>
