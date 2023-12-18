@@ -46,6 +46,7 @@ import agus from "../assets/agus.jpeg";
 import CardTokoh from "@/components/CardTokoh";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { useRouter } from "next/navigation";
+import Calendar from "@/components/Calendar";
 
 export default function Home() {
   const router = useRouter();
@@ -78,20 +79,20 @@ export default function Home() {
     window.screenY = 0;
   };
 
-  useEffect(() => {
-    const lenis = new Lenis();
+  // useEffect(() => {
+  //   const lenis = new Lenis();
 
-    lenis.on("scroll", (e: any) => {
-      // console.log(e)
-    });
+  //   lenis.on("scroll", (e: any) => {
+  //     // console.log(e)
+  //   });
 
-    function raf(time: any) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
+  //   function raf(time: any) {
+  //     lenis.raf(time);
+  //     requestAnimationFrame(raf);
+  //   }
 
-    requestAnimationFrame(raf);
-  }, []);
+  //   requestAnimationFrame(raf);
+  // }, []);
 
   const tokohData = [
     {
@@ -385,7 +386,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="mt-14 px-8 xl:mt-28 xl:px-32">
+        <section className="mt-14 px-8 xl:mt-28 xl:px-32" id="id-topics">
           <h1 className="font-cardo text-3xl xl:text-5xl">Most Topics</h1>
           <div className="mt-10 grid grid-cols-2 gap-4 xl:grid-cols-4 xl:gap-10">
             <Most
@@ -394,9 +395,9 @@ export default function Home() {
               additional="xl:col-span-2"
               onClick={() => router.push("/blog-sejarah")}
             />
-            <Most 
-              title="Kuliner" 
-              image={bgKuliner.src} 
+            <Most
+              title="Kuliner"
+              image={bgKuliner.src}
               onClick={() => router.push("/blog-kuliner")}
             />
             <Most
@@ -405,14 +406,14 @@ export default function Home() {
               additional="xl:row-span-2 h-auto"
               onClick={() => router.push("/blog-festival")}
             />
-            <Most 
-              title="Pariwisata" 
-              image={bgPariwista.src} 
+            <Most
+              title="Pariwisata"
+              image={bgPariwista.src}
               onClick={() => router.push("/blog-pariwisata")}
             />
-            <Most 
-              title="Seni Tradisional" 
-              image={bgSeni.src}  
+            <Most
+              title="Seni Tradisional"
+              image={bgSeni.src}
               onClick={() => router.push("/blog-seni")}
             />
             <Most
@@ -502,34 +503,53 @@ export default function Home() {
           </section>
         </section>
         <section className="mt-14 w-full px-8 xl:mt-28 xl:px-32">
-          <h1 className="font-cardo text-3xl xl:text-5xl">Indonesia Culture Event</h1>
-          <section className="mt-10 grid w-full xl:grid-cols-3 xl:gap-4 grid-cols-2 gap-6 md:grid-cols-3">
-            <div className="flex xl:flex-row  flex-col gap-4 w-full h-full">
-            <div className="xl:border-r-2 xl:border-b-0 flex flex-col border-[#D9D9D9] pr-3 items-center justify-center border-b-2">
-              <h1 className="font-semibold text-4xl xl:rotate-[-90deg] ">Jan.</h1>
-            </div>
+          <h1 className="font-cardo text-3xl xl:text-5xl">
+            Indonesia Culture Event
+          </h1>
+          <section className="mt-10 grid w-full grid-cols-2 gap-6 md:grid-cols-3 xl:grid-cols-3 xl:gap-4">
+            <div className="flex h-full  w-full flex-col gap-4 xl:flex-row">
+              <div className="flex flex-col items-center justify-center border-b-2 border-[#D9D9D9] pr-3 xl:border-b-0 xl:border-r-2">
+                <h1 className="text-4xl font-semibold xl:rotate-[-90deg] ">
+                  Jan.
+                </h1>
+              </div>
               <div className="flex flex-col gap-1">
                 <h1 className="text-lg font-light">Hari Kemerdekaan</h1>
-                <p className="text-[#747474] font-extralight text-sm">17 Agustus</p>
+                <p className="text-sm font-extralight text-[#747474]">
+                  17 Agustus
+                </p>
                 <h1 className="text-lg font-light">Hari Kemerdekaan</h1>
-                <p className="text-[#747474] font-extralight text-sm">17 Agustus</p>
+                <p className="text-sm font-extralight text-[#747474]">
+                  17 Agustus
+                </p>
                 <h1 className="text-lg font-light">Hari Kemerdekaan</h1>
-                <p className="text-[#747474] font-extralight text-sm">17 Agustus</p>
+                <p className="text-sm font-extralight text-[#747474]">
+                  17 Agustus
+                </p>
               </div>
             </div>
-            <div className="flex xl:flex-row  flex-col gap-4 w-full h-full">
-            <div className=" xl:border-r-2 border-b-2 xl:border-b-0 flex flex-col border-[#D9D9D9] pr-3 items-center justify-center">
-              <h1 className="font-semibold text-4xl xl:rotate-[-90deg] ">Jan.</h1>
-            </div>
+            {/* <div className="flex h-full  w-full flex-col gap-4 xl:flex-row">
+              <div className=" flex flex-col border-b-2 border-[#D9D9D9] pr-0 xl:pt-5 xl:border-b-0 xl:border-r-2">
+                <h1 className="text-5xl font-bold self-start xl:self-end xl:rotate-[-90deg] ">
+                  Jan.
+                </h1>
+              </div>
               <div className="flex flex-col gap-1">
                 <h1 className="text-lg font-light">Hari Kemerdekaan</h1>
-                <p className="text-[#747474] font-extralight text-sm">17 Agustus</p>
+                <p className="text-sm font-extralight text-[#747474]">
+                  17 Agustus
+                </p>
                 <h1 className="text-lg font-light">Hari Kemerdekaan</h1>
-                <p className="text-[#747474] font-extralight text-sm">17 Agustus</p>
+                <p className="text-sm font-extralight text-[#747474]">
+                  17 Agustus
+                </p>
                 <h1 className="text-lg font-light">Hari Kemerdekaan</h1>
-                <p className="text-[#747474] font-extralight text-sm">17 Agustus</p>
+                <p className="text-sm font-extralight text-[#747474]">
+                  17 Agustus
+                </p>
               </div>
-            </div>
+            </div> */}
+            <Calendar/>
           </section>
         </section>
       </main>

@@ -8,8 +8,9 @@ import kontemporer from "../../assets/kontemporer.jpg"
 
 const BlogSejarah = () => {
   return (
-    <section className="w-full max-w-[1600px] px-8 pt-[140px] xl:px-32">
-      <section className="grid grid-cols-1 gap-x-10 gap-y-11 md:grid-cols-2">
+    <section className="w-full max-w-[1600px] px-8 xl:px-32">
+
+      <section className="grid grid-cols-1 gap-x-10  pt-[140px] gap-y-11 md:grid-cols-2">
         <div className="h-[300px] overflow-hidden rounded-lg bg-slate-500">
           <Image
             src={bgSejarah}
