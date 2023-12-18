@@ -23,7 +23,7 @@ export default function CardTokoh({ img, text, nama }: CardProps) {
     //     <p className="text-xs sm:text-sm text-center font-bold">{nama}</p>
     //   </div>
     // </div>
-    <figure className="overflow-hidden rounded-xl bg-red-500 p-2 xl:flex xl:h-[150px] xl:p-0">
+    <figure className="overflow-hidden rounded-xl bg-slate-200 p-2 xl:flex xl:h-[150px] xl:p-0">
       <Image
         className="mx-auto h-24 w-24 rounded-full object-cover xl:h-auto xl:w-[100px] xl:rounded-none"
         src={img}
