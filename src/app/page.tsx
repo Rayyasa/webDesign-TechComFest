@@ -504,11 +504,15 @@ export default function Home() {
         <section className="mt-14 w-full px-8 xl:mt-28 xl:px-32">
           <h1 className="font-cardo text-3xl xl:text-5xl">Indonesia Culture Event</h1>
           <section className="mt-10 grid w-full grid-cols-3 gap-4">
-            <div className="flex flex-row gap-5">
-            <div className="w-[55px] h-[75px] pt-10 border-r-2 flex flex-col border-[#D9D9D9] pr-6">
-              <h1 className="font-semibold text-4xl rotate-[-90deg]">Jan.</h1>
+            <div className="flex flex-row gap-5 w-full h-full">
+            <div className="border-r-2 flex flex-col border-[#D9D9D9] pr-4 items-center justify-center">
+              <h1 className="font-semibold text-6xl rotate-[-90deg]">Jan.</h1>
             </div>
               <div className="flex flex-col gap-1">
+                <h1 className="text-lg font-light">Hari Kemerdekaan</h1>
+                <p className="text-[#747474] font-extralight text-sm">17 Agustus</p>
+                <h1 className="text-lg font-light">Hari Kemerdekaan</h1>
+                <p className="text-[#747474] font-extralight text-sm">17 Agustus</p>
                 <h1 className="text-lg font-light">Hari Kemerdekaan</h1>
                 <p className="text-[#747474] font-extralight text-sm">17 Agustus</p>
               </div>
