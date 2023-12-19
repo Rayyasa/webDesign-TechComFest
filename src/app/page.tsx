@@ -243,6 +243,7 @@ export default function Home() {
 
       <main className="mx-auto flex min-h-screen w-full max-w-[1600px]  flex-col pt-[60px]">
         <section
+        id="home"
           className={`${
             show5w ? "h-[3000px]" : "h-[600px]"
           } w-full overflow-hidden  bg-pink-600 ${
@@ -461,7 +462,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="mt-14 px-8 xl:mt-28 xl:px-32" id="id-topics">
+        <section className="mt-14 px-8 xl:mt-28 xl:px-32" id="topics">
           <h1 className="font-cardo text-3xl xl:text-5xl">Most Topics</h1>
           <div className="mt-10 grid grid-cols-2 gap-4 xl:grid-cols-4 xl:gap-10">
             <Most
@@ -499,7 +500,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="mt-14 w-full px-8 xl:mt-28 xl:px-32">
+        <section className="mt-14 w-full px-8 xl:mt-28 xl:px-32" id="gallery">
           <h1 className="font-cardo text-3xl xl:text-5xl">Gallery</h1>
 
           <section className="mt-10 grid w-full grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-4">
@@ -522,7 +523,7 @@ export default function Home() {
           </section>
         </section>
 
-        <section className="mt-14 w-full px-8 xl:mt-28 xl:px-32">
+        <section className="mt-14 w-full px-8 xl:mt-28 xl:px-32" id="blog">
           <h1 className="font-cardo text-3xl xl:text-5xl">Blog</h1>
           <section className="mt-10 grid w-full grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-4">
             <CardBlog
@@ -564,7 +565,7 @@ export default function Home() {
           </section>
         </section>
 
-        <section className="mt-14 w-full px-8 xl:mt-28 xl:px-32">
+        <section className="mt-14 w-full px-8 xl:mt-28 xl:px-32" id="quotes">
           <h1 className="font-cardo text-3xl xl:text-5xl">Apa Kata Tokoh</h1>
           <section className="mt-10 grid w-full grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-3">
             {tokohData.map((item, index) => (
@@ -577,7 +578,7 @@ export default function Home() {
             ))}
           </section>
         </section>
-        <section className="mt-14 w-full px-8 xl:mt-28 xl:px-32">
+        <section className="mt-14 w-full px-8 xl:mt-28 xl:px-32" id="event">
           <h1 className="font-cardo text-3xl xl:text-5xl">
             Indonesia Culture Event
           </h1>

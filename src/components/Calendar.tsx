@@ -4,10 +4,6 @@ interface PropsCalender {
 }
 
 const Calendar = ({ bulan, peristiwa }: PropsCalender) => {
-
-  console.log("===========")
-  console.log(peristiwa)
-
   return (
     <div className="flex w-full flex-col gap-4 xl:flex-row">
       <div className=" w-20 flex flex-col border-b-2 border-[#D9D9D9] pr-0 xl:border-b-0 xl:border-r-2 xl:pt-5">
