@@ -33,6 +33,10 @@ import g5 from "../assets/g5.jpg";
 import g6 from "../assets/g6.jpg";
 import g7 from "../assets/g7.jpg";
 import g8 from "../assets/g8.jpg";
+import blog1 from "../assets/blog1.webp";
+import blog2 from "../assets/blog2.webp";
+import blog3 from "../assets/blog3.webp";
+import blog4 from "../assets/blog4.webp";
 import CardBlog from "@/components/CardBlog";
 import jokowi from "../assets/jokowi.jpeg";
 import sri from "../assets/sri-mulyani.jpeg";
@@ -527,39 +531,43 @@ export default function Home() {
           <h1 className="font-cardo text-3xl xl:text-5xl">Blog</h1>
           <section className="mt-10 grid w-full grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-4">
             <CardBlog
-              img={g1.src}
-              tanggal={"6 Des 2023"}
-              waktu={"2mins ago"}
-              title={"Pesona Indonesia"}
+              url="https://labirutour.com/blog/mie-semarang"
+              img={blog1.src}
+              tanggal={"19 Des 2023"}
+              waktu={"19mins ago"}
+              title={"Eksplorasi Rasa dan Aroma, Berikut 5 Mie yang Wajib Dicoba di Semarang"}
               text={
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eleifend libero lectus, non malesuada quam vestibulum eget. Sed vitae velit ac massa tincidunt suscipit blandit sit amet lectus. Quisque orci nisl, pulvinar pulvinar arcu eu, molestie bibendum leo. Nunc pulvinar tortor eget sapien tristique, a efficitur odio laoreet. Nunc ac lorem porttitor erat hendrerit efficitur. Etiam volutpat tincidunt tellus, vitae maximus justo facilisis sit amet. Vestibulum egestas et ipsum nec congue. Quisque congue mauris ut lacus molestie, a venenatis magna molestie."
+                "Semarang merupakan kota yang kaya akan sejarah dan keberagaman budaya. Selain menjadi pusat bisnis dan industri, kota ini juga memiliki aneka ragam kuliner. Salah satu kuliner yang tidak terbantahkan adalah kelezatan mie yang ditemukan di beberapa sudut. "
               }
             />
             <CardBlog
-              img={g1.src}
-              tanggal={"6 Des 2023"}
-              waktu={"2mins ago"}
-              title={"Pesona Indonesia"}
+              url="https://labirutour.com/blog/nicoles-river-park-bogor"
+              img={blog2.src}
+              tanggal={"18 Des 2023"}
+              waktu={"5mins ago"}
+              title={"Istana Panda Taman Safari Cisarua, Surganya Para Pecinta Panda"}
               text={
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eleifend libero lectus, non malesuada quam vestibulum eget. Sed vitae velit ac massa tincidunt suscipit blandit sit amet lectus. Quisque orci nisl, pulvinar pulvinar arcu eu, molestie bibendum leo. Nunc pulvinar tortor eget sapien tristique, a efficitur odio laoreet. Nunc ac lorem porttitor erat hendrerit efficitur. Etiam volutpat tincidunt tellus, vitae maximus justo facilisis sit amet. Vestibulum egestas et ipsum nec congue. Quisque congue mauris ut lacus molestie, a venenatis magna molestie."
+                "Panda jantan (Cai Tao) dan panda betina (Hu Chun), keduanya tinggal di area yang tidak kurang dari 5000 meter persegi, diperkirakan luas areanya mencapai 3 hektar. Semakin mengagumkan lagi, tempat tinggal mereka juga didesain semirip mungkin dengan tempat asalnya. Keren, bukan?"
               }
             />
             <CardBlog
-              img={g1.src}
-              tanggal={"6 Des 2023"}
-              waktu={"2mins ago"}
-              title={"Pesona Indonesia"}
+              url="https://labirutour.com/blog/istana-panda-taman-safari-cisarua"
+              img={blog3.src}
+              tanggal={"19 Des 2023"}
+              waktu={"15mins ago"}
+              title={"Keliling Dunia dalam Satu Lokasi di Nicole’s River Park Bogor"}
               text={
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eleifend libero lectus, non malesuada quam vestibulum eget. Sed vitae velit ac massa tincidunt suscipit blandit sit amet lectus. Quisque orci nisl, pulvinar pulvinar arcu eu, molestie bibendum leo. Nunc pulvinar tortor eget sapien tristique, a efficitur odio laoreet. Nunc ac lorem porttitor erat hendrerit efficitur. Etiam volutpat tincidunt tellus, vitae maximus justo facilisis sit amet. Vestibulum egestas et ipsum nec congue. Quisque congue mauris ut lacus molestie, a venenatis magna molestie."
+                "Bogor bukan hanya dikenal masyarakat dengan berbagai destinasi wisata alam dengan pemandangan yang mempesona, tetapi juga karena berbagai destinasi wisata yang cocok sebagai tempat rekreasi keluarga dan edukasi. Baik berupa destinasi alami ataupun destinasi buatan, semuanya berhasil mencuri perhatian wisatawan."
               }
             />
             <CardBlog
-              img={g1.src}
-              tanggal={"6 Des 2023"}
-              waktu={"2mins ago"}
-              title={"Pesona Indonesia"}
+              url="https://labirutour.com/blog/nasi-telur-jogja"
+              img={blog4.src}
+              tanggal={"16 Des 2023"}
+              waktu={"8mins ago"}
+              title={"Explore Nasi Telur yang Viral di Jogja, Cocok Untuk Kantong Kering"}
               text={
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eleifend libero lectus, non malesuada quam vestibulum eget. Sed vitae velit ac massa tincidunt suscipit blandit sit amet lectus. Quisque orci nisl, pulvinar pulvinar arcu eu, molestie bibendum leo. Nunc pulvinar tortor eget sapien tristique, a efficitur odio laoreet. Nunc ac lorem porttitor erat hendrerit efficitur. Etiam volutpat tincidunt tellus, vitae maximus justo facilisis sit amet. Vestibulum egestas et ipsum nec congue. Quisque congue mauris ut lacus molestie, a venenatis magna molestie."
+                "Jogja menjadi salah satu surga bagi pecinta kuliner karena memiliki kuliner yang beragam, dimulai dari makanan tradisional, internasional, hingga modern. Kamu bisa menemukan beragam kuliner yang bisa kamu cicipi di kota ini di tiap-tiap sudut kota."
               }
             />
           </section>

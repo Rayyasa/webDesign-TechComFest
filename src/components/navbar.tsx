@@ -10,8 +10,7 @@ import { usePathname } from "next/navigation";
 const Navbar = () => {
   const { hideNav } = useHideNav();
   const path = usePathname().split('/')[1].split('-')[0]
-
-  console.log(path)
+  const pathAbout = usePathname().split('/')[1]
 
   return (
     <nav
@@ -29,7 +28,7 @@ const Navbar = () => {
             />
           </Link>
         </div>
-        {path != 'blog' && (
+        {path != 'blog' && pathAbout != 'about-us' && (
           <>
             <div className="flex-none hidden lg:block">
               <ul className="menu menu-horizontal px-1 gap-x-1">

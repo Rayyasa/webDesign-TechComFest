@@ -11,6 +11,7 @@ interface CardProps {
   waktu: string;
   title: string;
   text: string;
+  url: string;
 }
 export default function CardBlog({
   img,
@@ -18,10 +19,11 @@ export default function CardBlog({
   waktu,
   title,
   text,
+  url,
   ...props
 }: CardProps & React.HTMLAttributes<HTMLDivElement>) {
   return (
-    <div className="rounded-md overflow-hidden flex flex-col bg-slate-200 drop-shadow-md">
+    <div onClick={() => window.open(url, "_blank")} className="rounded-md cursor-pointer overflow-hidden flex flex-col bg-slate-200 drop-shadow-md">
       <Image
         src={img}
         alt="Blog 1"
@@ -43,7 +45,7 @@ export default function CardBlog({
           </div>
         </div>
         <div className="pb-1">
-          <h2 className="text-gray-950 font-semibold xl:text-lg text-base">{title}</h2>
+          <h2 className="text-gray-950 font-semibold xl:text-lg text-base line-clamp-1 xl:line-clamp-2">{title}</h2>
           <p className="xl:line-clamp-3 text-xs line-clamp-2">{text}</p>
         </div>
         <ChatBubbleLeftIcon className="h-6 w-6" />
