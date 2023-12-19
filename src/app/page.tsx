@@ -142,6 +142,81 @@ export default function Home() {
     },
   ];
 
+  const kalender = [
+    {
+      namaBulan: "Jan.",
+      peristiwa: [
+        "Tahun Baru",
+        "Hari Peringatan Penjajahan Belanda",
+        "Cap Go Meh",
+      ],
+    },
+    {
+      namaBulan: "Feb.",
+      peristiwa: ["Hari Kehidupan dan Kematian"],
+    },
+    {
+      namaBulan: "Mar.",
+      peristiwa: [
+        "Hari Film Nasional",
+        "Hari Perempuan Internasional",
+        "Hari Kebangkitan Nasional",
+      ],
+    },
+    {
+      namaBulan: "Apr.",
+      peristiwa: ["Hari Pendidikan Nasional", "Hari Kartini"],
+    },
+    {
+      namaBulan: "Mei",
+      peristiwa: [
+        "Hari Buruh Internasional",
+        "Hari Kebangkitan Nasional",
+        "Hari Raya Waisak",
+      ],
+    },
+    {
+      namaBulan: "Jun.",
+      peristiwa: ["Hari Pancasila", "Hari Lahir Pancasila", "Hari Raya Idul Fitri"],
+    },
+    {
+      namaBulan: "Jul.",
+      peristiwa: [
+        "Hari Bhayangkara",
+        "Hari Kemerdekaan Republik Indonesia",
+        "Hari Raya Idul Adha",
+      ],
+    },
+    {
+      namaBulan: "Agu.",
+      peristiwa: [
+        "Hari Kemerdekaan Republik Indonesia",
+        "Hari Jadi Kota/Kabupaten",
+      ],
+    },
+    {
+      namaBulan: "Sep.",
+      peristiwa: ["Hari Pertahanan Indonesia"],
+    },
+    {
+      namaBulan: "Okt.",
+      peristiwa: ["Hari Batik Nasional", "Hari Sumpah Pemuda"],
+    },
+    {
+      namaBulan: "Nov.",
+      peristiwa: ["Hari Pahlawan", "Hari Guru Nasional", "Hari Ayah Nasional"],
+    },
+    {
+      namaBulan: "Des.",
+      peristiwa: [
+        "Hari Ibu",
+        "Hari Natal",
+        "Hari Ulang Tahun Kota/Kabupaten",
+      ],
+    },
+  ];
+  
+
   const imageSources = [g1, g2, g3, g4, g5, g6, g7, g8];
 
   const [imgSrc, setImgSrc] = useState<any>(null);
@@ -506,50 +581,10 @@ export default function Home() {
           <h1 className="font-cardo text-3xl xl:text-5xl">
             Indonesia Culture Event
           </h1>
-          <section className="mt-10 grid w-full grid-cols-2 gap-6 md:grid-cols-3 xl:grid-cols-3 xl:gap-4">
-            <div className="flex h-full  w-full flex-col gap-4 xl:flex-row">
-              <div className="flex flex-col items-center justify-center border-b-2 border-[#D9D9D9] pr-3 xl:border-b-0 xl:border-r-2">
-                <h1 className="text-4xl font-semibold xl:rotate-[-90deg] ">
-                  Jan.
-                </h1>
-              </div>
-              <div className="flex flex-col gap-1">
-                <h1 className="text-lg font-light">Hari Kemerdekaan</h1>
-                <p className="text-sm font-extralight text-[#747474]">
-                  17 Agustus
-                </p>
-                <h1 className="text-lg font-light">Hari Kemerdekaan</h1>
-                <p className="text-sm font-extralight text-[#747474]">
-                  17 Agustus
-                </p>
-                <h1 className="text-lg font-light">Hari Kemerdekaan</h1>
-                <p className="text-sm font-extralight text-[#747474]">
-                  17 Agustus
-                </p>
-              </div>
-            </div>
-            {/* <div className="flex h-full  w-full flex-col gap-4 xl:flex-row">
-              <div className=" flex flex-col border-b-2 border-[#D9D9D9] pr-0 xl:pt-5 xl:border-b-0 xl:border-r-2">
-                <h1 className="text-5xl font-bold self-start xl:self-end xl:rotate-[-90deg] ">
-                  Jan.
-                </h1>
-              </div>
-              <div className="flex flex-col gap-1">
-                <h1 className="text-lg font-light">Hari Kemerdekaan</h1>
-                <p className="text-sm font-extralight text-[#747474]">
-                  17 Agustus
-                </p>
-                <h1 className="text-lg font-light">Hari Kemerdekaan</h1>
-                <p className="text-sm font-extralight text-[#747474]">
-                  17 Agustus
-                </p>
-                <h1 className="text-lg font-light">Hari Kemerdekaan</h1>
-                <p className="text-sm font-extralight text-[#747474]">
-                  17 Agustus
-                </p>
-              </div>
-            </div> */}
-            <Calendar/>
+          <section className="mt-10 grid w-full grid-cols-2 gap-6 md:grid-cols-3 xl:grid-cols-3 xl:gap-14">
+            {kalender.map((_, i) => {
+              return <Calendar key={i} bulan={_.namaBulan} peristiwa={_.peristiwa} />
+            })}
           </section>
         </section>
       </main>
