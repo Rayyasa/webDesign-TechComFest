@@ -245,7 +245,7 @@ export default function Home() {
         </section>
       )}
 
-      <main className="mx-auto flex min-h-screen w-full max-w-[1600px]  flex-col pt-[60px]">
+      <main className="mx-auto flex min-h-screen w-full max-w-[1600px] flex-col pt-[60px]">
         <section
         id="home"
           className={`${
