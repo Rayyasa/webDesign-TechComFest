@@ -285,7 +285,6 @@ export default function Home() {
                 <div className="mt-7 transition-all duration-700 group-hover:ml-5">
                   <Button title="Apa itu budaya ?" onClick={handleShow} />
                 </div>
-                {/* <Image src={logo} alt="indiscoveries" className="w-full object-cover drop-shadow-2xl "/> */}
               </div>
 
               <div className=" mr-10 hidden h-full w-[270px] items-end transition-all duration-700 group-hover:mr-14 group-hover:w-[280px] xl:flex">
