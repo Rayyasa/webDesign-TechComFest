@@ -13,8 +13,28 @@ import bromo from "../../assets/bromo.jpeg"
 
 const BlogPariwisata = () => {
   return (
-    <section className="w-full max-w-[1600px] px-8 pt-[140px] xl:px-32">
-      <section className="grid grid-cols-1 gap-x-10 gap-y-11 md:grid-cols-2 mb-12">
+    <section className="w-full max-w-[1600px] ">
+      <section
+        className="relative mt-16  h-72 w-full  "
+        style={{
+          backgroundImage: `url(${bgPariwisata.src})`,
+          backgroundSize: "cover",
+          backgroundPosition: 'center center'
+        }}
+      >
+        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="w-full h-full absolute inset-0 flex-col items-center justify-center flex  gap-5 px-5">
+          <h1 className="font-cardo text-4xl font-medium text-white">
+            Pariwisata
+          </h1>
+          <p className="text-white text-center">
+            {
+              '" Pariwisata bukan hanya tentang destinasi, tetapi juga tentang petualangan, pengalaman baru, dan kenangan yang tak terlupakan. "'
+            }
+          </p>
+        </div>
+      </section>
+      <section className="grid grid-cols-1 gap-x-10 gap-y-11 md:grid-cols-2 mb-12 px-8 pt-[70px] xl:px-32">
         <div className="h-[300px] overflow-hidden rounded-lg bg-slate-500">
           <Image
             src={bgPariwisata}
@@ -101,9 +121,9 @@ const BlogPariwisata = () => {
         </div>
       </section>
 
-      <h1 className="font-cardo text-5xl">Wisata Ikonik Indonesia</h1>
+      <h1 className="font-cardo text-5xl px-8 pt-[140px xl:px-32">Wisata Ikonik Indonesia</h1>
 
-      <section className="grid grid-cols-1 gap-x-10 gap-y-11 md:grid-cols-2 mt-12">
+      <section className="grid grid-cols-1 gap-x-10 gap-y-11 md:grid-cols-2 mt-12 px-8 pt-[140px xl:px-32">
         <div className="flex flex-col">
           <div className="h-[300px] overflow-hidden rounded-lg bg-slate-500">
             <Image

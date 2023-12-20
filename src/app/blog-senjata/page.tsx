@@ -7,8 +7,28 @@ import sumpit from "../../assets/sumpit.png";
 
 const BlogSenjata = () => {
   return (
-    <section className="w-full max-w-[1600px] px-8 pt-[140px] xl:px-32">
-      <section className="grid grid-cols-1 gap-x-10 gap-y-11 md:grid-cols-2">
+    <section className="w-full max-w-[1600px] ">
+      <section
+        className="relative mt-16  h-72 w-full  "
+        style={{
+          backgroundImage: `url(${bgSenjata.src})`,
+          backgroundSize: "cover",
+          backgroundPosition: 'center center'
+        }}
+      >
+        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="w-full h-full absolute inset-0 flex-col items-center justify-center flex  gap-5 px-5">
+          <h1 className="font-cardo text-4xl font-medium text-white">
+            Senjata
+          </h1>
+          <p className="text-white text-center">
+            {
+              '" Senjata bukanlah jawaban untuk perdamaian. Perdamaian dicapai melalui dialog, toleransi, dan pengertian. "'
+            }
+          </p>
+        </div>
+      </section>
+      <section className="grid grid-cols-1 gap-x-10 gap-y-11 md:grid-cols-2 px-8 pt-[140px] xl:px-32">
         <div className="h-[300px] overflow-hidden rounded-lg bg-slate-500">
           <Image
             src={bgSenjata}
