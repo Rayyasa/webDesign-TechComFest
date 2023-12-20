@@ -1,21 +1,16 @@
 "use client";
-import Lenis from "@studio-freight/lenis";
-import Image, { StaticImageData } from "next/image";
-import useHideNav from "./hook/useHideNav";
+import Image from "next/image";
 import penari from "../assets/penari.png";
-import batikLogo from "../assets/1178.jpg";
 import boro from "../assets/borobudur.webp";
-import logo from "../assets/indiscoveries-logo.png";
-import { Cardo, Gideon_Roman } from "next/font/google";
 import Most from "@/components/most";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import bgWhite5 from "../assets/bgWhite5.png";
 import Button from "@/components/button";
 import "./globals.css";
 import bgPariwista from "../assets/pariwisata.png";
 import bgSejarah from "../assets/sejarah.png";
 import bgSeni from "../assets/seni.png";
-import bgFestival from "../assets/festival.png";
+import bgFestival from "../assets/festival.jpeg";
 import bgKuliner from "../assets/kuliner.png";
 import bgSenjata from "../assets/senjata.jpg";
 import { useMousePosition } from "./hook/useMousePosition";
@@ -82,21 +77,6 @@ export default function Home() {
     }
     window.screenY = 0;
   };
-
-  // useEffect(() => {
-  //   const lenis = new Lenis();
-
-  //   lenis.on("scroll", (e: any) => {
-  //     // console.log(e)
-  //   });
-
-  //   function raf(time: any) {
-  //     lenis.raf(time);
-  //     requestAnimationFrame(raf);
-  //   }
-
-  //   requestAnimationFrame(raf);
-  // }, []);
 
   const tokohData = [
     {
@@ -285,10 +265,6 @@ export default function Home() {
                 <div className="mt-7 transition-all duration-700 group-hover:ml-5">
                   <Button title="Apa itu budaya ?" onClick={handleShow} />
                 </div>
-              </div>
-
-              <div className=" mr-10 hidden h-full w-[270px] items-end transition-all duration-700 group-hover:mr-14 group-hover:w-[280px] xl:flex">
-                <Image alt="penari" src={penari} className="object-cover" />
               </div>
             </div>
           </div>

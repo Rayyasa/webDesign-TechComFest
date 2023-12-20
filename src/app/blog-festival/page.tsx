@@ -1,5 +1,5 @@
 import Image from "next/image";
-import bgFestival from "../../assets/festival.png";
+import bgFestival from "../../assets/festival.jpeg";
 import baliArt from "../../assets/bali_art.jpg"
 import jemberFashion from "../../assets/jember.jpg"
 import tobaFest from "../../assets/danau_toba.jpg"
